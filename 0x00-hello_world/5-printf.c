@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
-* main - Makes the sum of two numbers
+/**
+* main - main function of the program
 *
 * printf practise
 * Return: return 0 for no errors

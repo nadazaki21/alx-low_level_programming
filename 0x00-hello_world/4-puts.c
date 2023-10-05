@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
-* main - Makes the sum of two numbers
+/**
+* main - maun fun
 *
 * puts function practise
 * Return: return 0 for no errors
