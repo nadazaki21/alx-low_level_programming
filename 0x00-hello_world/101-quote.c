@@ -4,10 +4,10 @@
 * main - main fun
 *
 * puts function practise
-* Return: here the error message displayed is going to be the same 
+* Return: here the error message displayed is going to be the same
 * as the output beacause the  streams , the error and the output
 * were mereged toghether, if  you run it, it will produce the error
-*and the output 
+*and the output
 */
 int main(void)
 {
