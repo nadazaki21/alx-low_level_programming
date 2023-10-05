@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
-  * output files that have the size of each data type fpr 42 and 64 systems
+/**
+* output files that have the size of each data type fpr 42 and 64 systems
 */
 int main(void)
 {
