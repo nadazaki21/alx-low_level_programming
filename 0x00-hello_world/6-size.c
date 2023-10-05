@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* op_add - Makes the sum of two numbers
+* main - Makes the sum of two numbers
 *
 * output files that have the size of each data type fpr 42 and 64 systems
 * Return: return 0 for no errors

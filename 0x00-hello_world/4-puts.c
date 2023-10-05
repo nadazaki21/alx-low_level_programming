@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-* op_add - Makes the sum of two numbers
+* main - Makes the sum of two numbers
 *
 * puts function practise
 * Return: return 0 for no errors
