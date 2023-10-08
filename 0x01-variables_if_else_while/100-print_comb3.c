@@ -8,23 +8,26 @@
 int main(void)
 {
 int num1;
+int num2;
 num1 = 0;
+num2 = 9;
 
 
-	while (num1 <= 9)
+	for (int i = 0 ; i < 9; i++)
 	{
-		putchar(num1 + '0'); /* + num1 is considered
-		*an offset from the asci code of the char 0
-		*/
-		if (num1 != 9)
+		for (int j = i + 1 ; j <= 9 ; j++)
 		{
-		putchar(',');
-		putchar(' ');
-		}
-		num1++;
-	}
-	putchar('\n');
+			putchar(i + '0');
+			putchar (j + '0');
 
+			if (i != 8)
+			{
+				putchar (',');
+				putchar(' ');
+			}
+		}
+	}
+putchar('\n');
 
 return (0);
 }
