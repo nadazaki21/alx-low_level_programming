@@ -13,10 +13,10 @@ letter = 0x61;
 
 	while (letter <= 0x7A)
 	{
-        if (letter != 0x71 && letter != 0x65)
-        {
-            putchar(letter);
-        }
+		if (letter != 0x71 && letter != 0x65)
+		{
+			putchar(letter);
+		}
 		
 		letter++;
 	}
