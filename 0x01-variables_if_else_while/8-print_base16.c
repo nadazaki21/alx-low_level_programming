@@ -10,7 +10,7 @@ int main(void)
 char num;
 char letter;
 num = 0x30;
-letter = 0x41;
+letter = 0x61;
 
 
 	while (num <= 0x39)
@@ -18,7 +18,7 @@ letter = 0x41;
 		putchar(num);
 		num++;
 	}
-	while (letter <= 0x46)
+	while (letter <= 0x66)
 	{
 		putchar(letter);
 		letter++;
