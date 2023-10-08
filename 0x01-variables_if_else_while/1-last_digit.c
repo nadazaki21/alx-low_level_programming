@@ -25,9 +25,14 @@ last_digit = n % 10;
 
 	}
 
-	else
+	else if (last_digit == 0)
 	{
 		printf("Last digit of %d is %d\n", n, last_digit);
+	}
+
+	else
+	{
+		printf("error");
 	}
 
 return (0);
