@@ -17,7 +17,6 @@ letter = 0x61;
 		{
 			putchar(letter);
 		}
-		
 		letter++;
 	}
 	putchar('\n');
