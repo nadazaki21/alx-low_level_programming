@@ -7,12 +7,6 @@
  */
 int main(void)
 {
-int num1;
-int num2;
-num1 = 0;
-num2 = 9;
-
-
 	for (int i = 0 ; i < 9; i++)
 	{
 		for (int j = i + 1 ; j <= 9 ; j++)
