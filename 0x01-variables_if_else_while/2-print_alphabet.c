@@ -14,8 +14,8 @@ letter = 0x61;
 	while (letter <= 0x7A)
 	{
 		putchar(letter);
-		putchar('\n');
 		letter++;
 	}
+	putchar('\n');
 return (0);
 }
