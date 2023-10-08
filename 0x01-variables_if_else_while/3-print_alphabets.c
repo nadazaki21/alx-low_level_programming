@@ -19,7 +19,7 @@ lower_letter = 0x41;
 		upper_letter++;
 	}
 
-    while (lower_letter <= 0x5A)
+	while (lower_letter <= 0x5A)
 	{
 		putchar(lower_letter);
 		lower_letter++;
