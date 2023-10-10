@@ -10,22 +10,37 @@ void times_table(void)
 {
 	int i;
 	int j;
-	int result;
+    int result; 
 
 	for (i = 0 ; i <= 9 ; i++)
 	{
 		for (j = 0; j <= 9 ; j++)
 		{
-			result = i * j;
-			printf("%d", result);
-			putchar(',');
-			putchar(' ');
-			putchar(' ');
+            result = i * j;
+            
+            if(result > 9 && j != 0 )
+            {
+                putchar(' ');
+                printf("%d", result);
+                
+            }
+            else
+            {
+                putchar(' ');
+                putchar(' ');
+                printf("%d", result);
+                
+            }
+
+            if(j != 9)
+            {
+                putchar(',');  
+            }
 
 		}
 
-			putchar('\n');
-
+        putchar('\n');
+        
 	}
 
 }

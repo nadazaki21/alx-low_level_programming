@@ -14,14 +14,30 @@ int main()
 	{
 		for (j = 0; j <= 9 ; j++)
 		{
-            result = i * j ; 
-			printf("%d", result);
-            _putchar(',');
-            _putchar('  ');
+            result = i * j;
+            
+            if(result > 9 && j != 0 )
+            {
+                putchar(' ');
+                printf("%d", result);
+                
+            }
+            else
+            {
+                putchar(' ');
+                putchar(' ');
+                printf("%d", result);
+                
+            }
+
+            if(j != 9)
+            {
+                putchar(',');  
+            }
 
 		}
 
-        _putchar('\n');
+        putchar('\n');
         
 	}
 }
