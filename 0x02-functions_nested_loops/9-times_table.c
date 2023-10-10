@@ -1,7 +1,4 @@
-
-#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 /**
 * times_table - checking if the ltter is lower case or not
 * Return: if it is lower case it will return 1, other than
