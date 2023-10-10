@@ -4,9 +4,9 @@
 
 int main()
 {
-    int x = -9 ; 
-
-    printf("%d\n", abs(x));
-
+    int n =98 ; 
+    int last_digit;
+    last_digit = n % 10;
+    printf("%d\n" , last_digit);
     return 0 ; 
 }

@@ -1,6 +1,7 @@
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
 * print_last_digit- checking if the ltter is lower case or not
 * @n: the char to be checked
@@ -12,9 +13,12 @@
 int print_last_digit(int n)
 {
 	int last_digit;
-    last_digit = n % 10;
-	
 
-return (last_digit);
+
+	last_digit = abs(n % 10);
+
+	_putchar(last_digit + '0');
+
+	return (last_digit);
 }
 
