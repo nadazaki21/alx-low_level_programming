@@ -14,7 +14,7 @@ int main(void)
 
 	last = result;
 
-	for (i = 2 ; i < n ; i++)
+	while (result < 4000000)
 	{
 		result = last + before_last;
 		before_last = last;
