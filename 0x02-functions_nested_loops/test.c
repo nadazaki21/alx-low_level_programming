@@ -3,10 +3,16 @@
 #include <stdlib.h>
 
 int main()
-{
-    int n =98 ; 
-    int last_digit;
-    last_digit = n % 10;
-    printf("%d\n" , last_digit);
-    return 0 ; 
+{   
+    int i ;
+    int j ;  
+
+    for (i = 0 ; i <= 23 ; i++)
+    {
+        for ( j = 0; j < 60 ; j++)
+        {
+            printf("%.2d:%.2d\n",i ,j);
+        }
+        
+    }
 }
