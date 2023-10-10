@@ -1,25 +1,12 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int main()
 {
-    char c;
+    int x = -9 ; 
 
-    c='T';
-    printf(" %d\n", isalpha(c));
+    printf("%d\n", abs(x));
 
-    c='D';
-    printf("%d\n", isalpha(c));
-
-    c= 9; 
-  printf("%d\n", isalpha(c));
-
-  c= 'a'; 
-  printf("%d\n", isalpha(c));
-
-
-c ='108'; 
-  printf("%d\n", isalpha(c));
-
-    return 0;
+    return 0 ; 
 }
