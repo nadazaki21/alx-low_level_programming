@@ -18,7 +18,7 @@ int i;
 		_putchar(letter);
 		letter++;
 	}
-       putchar('\n');
+       _putchar('\n');
     }
 	
 	
