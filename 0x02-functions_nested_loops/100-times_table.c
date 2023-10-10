@@ -8,13 +8,11 @@
 * letter or is a number it will return 0
 */
 
-void main(void)
+void print_times_table(int n)
 {
 	int i;
 	int j;
 	int result;
-
-    int n=9; 
     
     if ((n>0) && (n<15))
     {
