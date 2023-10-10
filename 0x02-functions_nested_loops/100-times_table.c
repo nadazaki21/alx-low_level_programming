@@ -22,9 +22,14 @@ void print_times_table(int n)
 			{
 				result = i * j;
 
-				if (result > 9 && j != 0)
+				if (result > 9 && result < 100 && j != 0)
 				{
 					putchar(' ');
+					putchar(' ');
+					printf("%d", result);
+				}
+				else if (result < 100)
+				{
 					putchar(' ');
 					printf("%d", result);
 				}
@@ -40,13 +45,10 @@ void print_times_table(int n)
 					printf("%d", result);
 				}
 				if (j != n)
-				{
-					putchar(',');
-				}
+					{putchar(','); }
 			}
 			putchar('\n');
 		}
-
 	}
 }
 
