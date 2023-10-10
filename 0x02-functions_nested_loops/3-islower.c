@@ -6,6 +6,6 @@
 
 int _islower(int c)
 {
-    return _islower(c);
+    return islower(c);
 
 }
