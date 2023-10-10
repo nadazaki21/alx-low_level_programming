@@ -19,7 +19,7 @@ int main(void)
     printf("%d", 2); 
     putchar(',');
     putchar(' ');
-    
+
     for (i = 3 ; i < n ; i++)
     {
         
@@ -35,8 +35,8 @@ int main(void)
             putchar(' ');
         }
         
-        putchar('\n');
+        
     }
-
+    putchar('\n');
 	return (0);
 }
