@@ -7,9 +7,9 @@
 int main(void)
 {
 	int n = 50;
-    long long int i, last;
+    long  int i, last;
     long  int result = 3;
-    long long int before_last = 2;
+    long  int before_last = 2;
 
     last = result ; 
     for (i = 0 ; i < n ; i++)
