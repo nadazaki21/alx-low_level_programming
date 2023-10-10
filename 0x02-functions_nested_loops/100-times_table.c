@@ -25,6 +25,7 @@ void print_times_table(int n)
 				if (result > 9 && j != 0)
 				{
 					putchar(' ');
+					putchar(' ');
 					printf("%d", result);
 				}
 				else if (j == 0)
@@ -33,6 +34,7 @@ void print_times_table(int n)
 				}
 				else
 				{
+					putchar(' ');
 					putchar(' ');
 					putchar(' ');
 					printf("%d", result);
