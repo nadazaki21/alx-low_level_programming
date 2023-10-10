@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	int n = 1024;
 	int i;
 	int sum = 0;
 
