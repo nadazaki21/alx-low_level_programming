@@ -16,4 +16,6 @@ int main(void)
 			sum = sum + i;
 		}
 	}
+
+	return (0);
 }
