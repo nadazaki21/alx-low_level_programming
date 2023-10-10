@@ -22,7 +22,8 @@ void jack_bauer(void)
             result = i * j ; 
 			printf("%d", result);
             putchar(',');
-            putchar('  ');
+            putchar(' ');
+            putchar(' ');
 
 		}
 
