@@ -5,5 +5,14 @@
 */
 void print_alphabet(void)
 {
-_putchar('a');
+char letter;
+letter = 0x61;
+
+	while (letter <= 0x7A)
+	{
+		_putchar(letter);
+		letter++;
+	}
+	putchar('\n');
+
 }
