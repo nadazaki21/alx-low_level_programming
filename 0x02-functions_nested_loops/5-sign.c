@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <ctype.h>
 /**
 * print_sign - checking if the ltter is lower case or not
 * @n: the char to be checked
@@ -9,21 +8,21 @@
 * letter or is a number it will return 0
 */
 
-int print_sign(int n)
+int print_sign (int n)
 {
 	if (n > 0)
 	{
-        putchar('+');
+        _putchar('+');
 		return (1);
 	}
-    else if ( n < 0)
+    else if (n < 0)
     {
-        putchar('-');
+        _putchar('-');
 		return (-1);
     }
 	else 
 	{
-        putchar('0');
+        _putchar('0');
 		return (0);
 	}
 }
