@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-	int n = 50;
-	long  int i, last;
+	long  int last;
 	long  int result = 2;
 	long  int before_last = 1;
 	long  int sum = 2;
