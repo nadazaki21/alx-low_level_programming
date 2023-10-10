@@ -8,8 +8,8 @@ int main(void)
 {
 	int n = 50;
     long  int i, last;
-    long  int result = 3;
-    long  int before_last = 2;
+    long  int result = 2;
+    long  int before_last = 1;
 
     last = result ;
 
