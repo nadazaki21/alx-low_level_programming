@@ -14,7 +14,7 @@ void main(void)
 	int j;
 	int result;
 
-    int n=9; 
+    int n=10; 
     
     if ((n>0) && (n<15))
     {
@@ -24,7 +24,7 @@ void main(void)
             {
                 result = i * j;
 
-                if (result > n && j != 0)
+                if (result > 9 && j != 0)
                 {
                     putchar(' ');
                     printf("%d", result);
