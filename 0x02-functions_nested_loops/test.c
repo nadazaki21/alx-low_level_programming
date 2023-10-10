@@ -1,61 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
-* print_times_table - checking if the ltter is lower case or not
-* @n : number of table
-* Return: if it is lower case it will return 1, other than
-* that is it is a ccapital
-* letter or is a number it will return 0
-*/
-
-void main(void)
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
 	int i;
-	int j;
-	int result;
+	int sum = 0;
 
-    int n=10; 
-    
-    if ((n>0) && (n<15))
-    {
-            for (i = 0 ; i <= n ; i++)
-        {
-            for (j = 0; j <= n ; j++)
-            {
-                result = i * j;
+	for (i = 1024 ; i >0  ; i--)
+	{
+		if (((i % 3) == 0) || ((i % 5) == 0))
+		{
+			sum = sum + i;
+		}
+	}
 
-                if (result > 9 && j != 0)
-                {
-                    putchar(' ');
-                    printf("%d", result);
+	printf("%d\n", sum);
 
-                }
-                else if (j == 0)
-                {
-                    printf("%d", result);
-
-                }
-                else
-                {
-                    putchar(' ');
-                    putchar(' ');
-                    printf("%d", result);
-
-                }
-
-                if (j != n)
-                {
-                    putchar(',');
-                }
-
-            }
-
-            putchar('\n');
-        }
-
-    }
-
-	
-
+	return (0);
 }
-
