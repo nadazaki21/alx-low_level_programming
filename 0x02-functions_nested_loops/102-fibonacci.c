@@ -20,7 +20,7 @@ int main(void)
     putchar(',');
     putchar(' ');
 
-    for (i = 3 ; i < n ; i++)
+    for (i = 2 ; i < n ; i++)
     {
         
         result = last + before_last;
