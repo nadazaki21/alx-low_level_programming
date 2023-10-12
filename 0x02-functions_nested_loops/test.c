@@ -1,23 +1,39 @@
+
+#include "main.h"
 #include <stdio.h>
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
+#include <stdlib.h>
+
 int main(void)
 {
-	int i;
-	int sum = 0;
 
-	for (i = 1024 ; i >0  ; i--)
-	{
-		if (((i % 3) == 0) || ((i % 5) == 0))
-		{
-			sum = sum + i;
-		}
-	}
 
-	printf("%d\n", sum);
+
+	int last_digit;
+
+    int n =98 ; 
+	last_digit = abs(n % 10);
+
+_putchar(last_digit + '0');
+	 n =0 ; 
+	last_digit = abs(n % 10);
+	_putchar(last_digit + '0');
+
+	 n = -1024 ; 
+	last_digit = abs(n % 10);
+
+
+
+	//_putchar(last_digit + '0');
+
+
+	
+	printf ("%d", last_digit);
+    
+
+
+	
+
+
 
 	return (0);
 }
