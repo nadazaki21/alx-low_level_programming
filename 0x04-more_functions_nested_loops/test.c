@@ -11,9 +11,9 @@ int main()
     // c = 'a';
     // printf("%c: %d\n", c, isupper(c));
 
-    char x = 'a' ;
+    char x = '1' ;
 
-    printf("%d\n", isupper(x));
+    printf("%d\n", isdigit(x));
 
     return (0);
 
