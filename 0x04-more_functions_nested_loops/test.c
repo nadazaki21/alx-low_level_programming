@@ -1,22 +1,41 @@
 #include <ctype.h>
 #include <stdio.h>
+#include "main.h"
+
 
 int main()
 {
-    // char c;
+    int i, j, k; /* three counters*/
+	int space, hash;
+    int size = 10 ; 
+    
+    space = size - 1;
+    hash = 1;
 
+	if (size <= 0)
+	{
+		printf("\n");
+	}
+	else
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j <= space ; j++)
+			{
+				printf(" ");
+			}
 
-    // c = 'A';
-    // printf("%c: %d\n", c, isupper(c));
-    // c = 'a';
-    // printf("%c: %d\n", c, isupper(c));
+            for (k = 0; k < hash ; k++)
+			{
+				printf("#");
+			}
 
-    char x = '1' ;
+			printf("\n");
+            space--;
+            hash++;
 
-    printf("%d\n", isdigit(x));
+		}
 
+	}
     return (0);
-
-    // 0 in case of lower
-    // non zero in case of uuper 
 }

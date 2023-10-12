@@ -4,7 +4,7 @@
 /**
  * _isdigit - function to checker if dgit
  * @c: the char to check
- * Return: 0 if not, 1 if it is 
+ * Return: 0 if not, 1 if it is
 */
 
 int _isdigit(int c)
