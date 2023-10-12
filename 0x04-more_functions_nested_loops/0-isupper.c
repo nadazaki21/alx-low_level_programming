@@ -3,7 +3,7 @@
 
 /**
  * _isupper - function to checker lower or uppe rcase of char
- * @c : the char to check
+ * @c: the char to check
  * Return: 0 if lower case , 1 if upper case
 */
 
