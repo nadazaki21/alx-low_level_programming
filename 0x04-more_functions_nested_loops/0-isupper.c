@@ -13,7 +13,7 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-	else if (isupper(c) != 0)
+	else
 	{
 		return (1);
 	}

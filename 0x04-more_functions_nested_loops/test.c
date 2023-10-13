@@ -1,20 +1,43 @@
 #include <ctype.h>
 #include <stdio.h>
 #include "main.h"
+#include "putchar.c"
 
+
+// int main()
+// {
+// 	int j;
+// 	int i;
+
+// 	for (j = 0; j < 10; j++)
+// 	{
+		
+// 		for (i = 0 ; i < 15 ; i++)
+// 		{
+			
+// 			printf("%d",i);
+
+		
+// 		}
+
+// 	_putchar('\n');
+    
+// 	}
+// 	return (0);
+// }
 
 int main()
 {
-    int i, j, k; /* three counters*/
+ 	int i, j, k; /* three counters*/
 	int space, hash;
-    int size = 10 ; 
-    
-    space = size - 1;
-    hash = 1;
+	int size = 10;
+
+	space = size - 1;
+	hash = 1;
 
 	if (size <= 0)
 	{
-		printf("\n");
+		_putchar("\n");
 	}
 	else
 	{
@@ -22,20 +45,22 @@ int main()
 		{
 			for (j = 0; j <= space ; j++)
 			{
-				printf(" ");
+				_putchar(' ');
 			}
 
-            for (k = 0; k < hash ; k++)
+			for (k = 0; k < hash ; k++)
 			{
-				printf("#");
+				_putchar('#');
 			}
 
-			printf("\n");
-            space--;
-            hash++;
+			_putchar('\n');
+			space--;
+			hash++;
 
 		}
 
 	}
-    return (0);
+
+
+    return 0;
 }

@@ -13,7 +13,7 @@ void print_triangle(int size)
 
 	if (size <= 0)
 	{
-		printf("\n");
+		_putchar("\n");
 	}
 	else
 	{
@@ -21,15 +21,15 @@ void print_triangle(int size)
 		{
 			for (j = 0; j <= space ; j++)
 			{
-				printf(" ");
+				_putchar(' ');
 			}
 
 			for (k = 0; k < hash ; k++)
 			{
-				printf("#");
+				_putchar('#');
 			}
 
-			printf("\n");
+			_putchar('\n');
 			space--;
 			hash++;
 
