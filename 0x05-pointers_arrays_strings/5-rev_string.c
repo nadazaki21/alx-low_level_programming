@@ -3,7 +3,7 @@
 void rev_string(char *s)
 {
     int len = strlen(s);
-    int temp[10];
+    int temp[1000];
     int i;
     int j;
 
