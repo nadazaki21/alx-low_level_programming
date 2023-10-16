@@ -13,7 +13,7 @@ void puts2(char *str)
 	{
 		if ((i % 2) == 0)
 		{
-			printf("%d", *(str + i));
+			printf("%c", *(str + i));
 		}
 
 	}
