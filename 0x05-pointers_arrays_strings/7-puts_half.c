@@ -9,14 +9,11 @@ void puts_half(char *str)
 	int len = strlen(str);
 	int i;
 
-	printf("the length is %d \n", len);
-
 	if ((len % 2) == 0)
 	{
 		for (i = (len / 2) ; i < len ; i++)
 		{
-			printf("now index %d", i);
-			printf(" char is %c \n", *(str + i));
+			printf("%c", *(str + i));
 
 		}
 	}
@@ -24,9 +21,7 @@ void puts_half(char *str)
 	{
 		for (i = ((len / 2) + 1) ; i < len ; i++)
 		{
-			printf("now index %d", i);
-			printf(" char is %c \n", *(str + i));
-
+			printf("%c", *(str + i));
 		}
 
 	}
