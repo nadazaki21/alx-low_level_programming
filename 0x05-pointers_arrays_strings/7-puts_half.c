@@ -15,7 +15,6 @@ void puts_half(char *str)
 	{
 		/*printf("now index %d", i);*/
 		printf("%c", *(str + i));
-		
 
 	}
 	putchar('\n');
