@@ -9,12 +9,14 @@ char *_strcpy(char *dest, char *src)
 {
 	int len = strlen(src);
 	int i;
+	static int address;
 
 	for (i = 0 ; i <= len ; i++)
 	{
-		*(dest + 1) = *(src + i);
+		*(dest + i) = *(src + i);
 	}
 
-	return (&dest);
+	address = &dest;
+	return (address);
 
 }
