@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 /**
  * puts2 - prints every other char in string
  * @str: pointer to sting to be printed
