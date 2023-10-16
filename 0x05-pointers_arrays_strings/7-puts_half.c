@@ -9,12 +9,12 @@ void puts_half(char *str)
 	int len = strlen(str);
 	int i;
 
-	/*printf("the length is %d \n", len);*/
+	printf("the length is %d \n", len);
 
 	for (i = (len / 2) ; i < len ; i++)
 	{
-		/*printf("now index %d", i);*/
-		printf("%c", *(str + i));
+		printf("now index %d", i);
+		printf(" char is %c \n", *(str + i));
 
 	}
 	putchar('\n');
