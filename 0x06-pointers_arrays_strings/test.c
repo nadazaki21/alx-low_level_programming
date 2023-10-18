@@ -41,15 +41,16 @@ int main(void)
     {
         if (s1[i] > s2[i])
         {
-            return (-15);
+            printf("%d", -15);
+            
         }
         else if (s1[i] < s2[i])
         {
-            return (15);
+             printf("%d", -15);
         }
         else
         {
-            return 0;
+             printf("%d", 0);
         }
         
         

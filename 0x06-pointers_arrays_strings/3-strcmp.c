@@ -5,7 +5,6 @@ int _strcmp(char *s1, char *s2)
     int lenS2 = 0;
     int len; /*len with which i will compare*/
 
-
     while (*(s1+lenS1) != '\0')
     {
             lenS1++;
@@ -15,7 +14,6 @@ int _strcmp(char *s1, char *s2)
     {
             lenS2++;
     }
-
 
     /* finding out which string is longer, we shall take the shorter */
     if (lenS1 > lenS2)
@@ -31,24 +29,20 @@ int _strcmp(char *s1, char *s2)
         len = lenS1;
     }
 
-
     for (i = 0; i < len; i++)
     {
         if (s1[i] > s2[i])
         {
             return (-15);
+            break;
         }
         else if (s1[i] < s2[i])
         {
             return (15);
+            break;
         }
-        else
-        {
-            return 0;
-        }
-        
-        
+         
     }
-    
-    
+
+    return 0;
 }
