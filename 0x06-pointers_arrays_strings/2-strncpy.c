@@ -8,12 +8,28 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
+	int countersrc = 0;
 
 	static char *ptr;
 
-	for (i = 0; i < n; i++)
+	while (*(src + countersrc) != '\0')
 	{
-		dest[i] = src[i];
+		countersrc++;
+	}
+
+	if (countersrc >= n)
+	{
+		for (i = 0; i < n; i++)
+		{
+			dest[i] = src[i];
+		}
+	}
+	else  /* src is less than the allowed len*/
+	{
+		for (i = 0; i < (countersrc + 1); i++)
+		{
+			dest[i] = src[i];
+		}
 	}
 
 	ptr = dest;
