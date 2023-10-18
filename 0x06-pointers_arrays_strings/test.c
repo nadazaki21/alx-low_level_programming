@@ -1,63 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
-{
+int main() {
+    char source[] = "Hello, World!";
+    char destination[10] = "Hi, "; // Initialize a destination string with a capacity of 10 characters
 
-    int i;
-    int lenS1 = 0;
-    int lenS2 = 0;
-    int len; /*len with which i will compare*/
-    char s1[]="ab";
-    char s2[] = "cd";
+    strncpy(destination, source, 9); // Copy the first 9 characters from source to destination
+    destination[9] = '\0'; // Null-terminate the destination manually
 
+    printf("Source: %s\n", source);
+    printf("Destination: %s\n", destination);
 
-    while (*(s1+lenS1) != '\0')
-    {
-            lenS1++;
-    }
-
-    while (*(s2+lenS2) != '\0')
-    {
-            lenS2++;
-    }
-
-
-    /* finding out which string is longer, we shall take the shorter */
-    if (lenS1 > lenS2)
-    {
-        len = lenS2;
-    }
-    else if (lenS1 < lenS2)
-    {
-        len = lenS1;
-    }
-    else
-    {
-        len = lenS1;
-    }
-
-
-    for (i = 0; i < len; i++)
-    {
-        if (s1[i] > s2[i])
-        {
-            printf("%d", -15);
-            
-        }
-        else if (s1[i] < s2[i])
-        {
-             printf("%d", -15);
-        }
-        else
-        {
-             printf("%d", 0);
-        }
-        
-        
-    }
-    
-    
-
-
-
+    return 0;
 }
