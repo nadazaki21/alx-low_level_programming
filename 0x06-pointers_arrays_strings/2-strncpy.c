@@ -26,7 +26,7 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	else  /* src is less than the allowed len*/
 	{
-		for (i = 0; i < (countersrc); i++)
+		for (i = 0; i <= (countersrc); i++)
 		{
 			dest[i] = src[i];
 		}
