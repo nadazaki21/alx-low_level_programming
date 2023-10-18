@@ -13,3 +13,9 @@ int main() {
 
     return 0;
 }
+
+
+// for (i = 0; i < (countersrc + 1); i++)
+// 		{
+// 			dest[i] = src[i];
+// 		}
