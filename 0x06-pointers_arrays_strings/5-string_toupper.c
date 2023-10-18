@@ -4,14 +4,14 @@
  * @n: pointer to string
  * Return: pointer to string after changing
 */
-char *string_toupper(char * n)
+char *string_toupper(char *n)
 {
-    int i = 0;
-    while (*(n+i) != '\0')
-    {
-        *(n+i) = toupper(*(n+i));
-        i++;
-    }
-    
-    return (n);
+	int i = 0;
+
+	while (*(n + i) != '\0')
+	{
+		*(n + i) = toupper(*(n + i));
+		i++;
+	}
+	return (n);
 }
