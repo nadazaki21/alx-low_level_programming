@@ -1,9 +1,9 @@
 int _strcmp(char *s1, char *s2)
 {
-    int i, j;
+    int i;
     int lenS1 = 0;
     int lenS2 = 0;
-    int len; /*len with iwhich i will compare*/
+    int len; /*len with which i will compare*/
 
 
     while (*(s1+lenS1) != '\0')

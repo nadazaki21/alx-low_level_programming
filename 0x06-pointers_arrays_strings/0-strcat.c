@@ -1,17 +1,20 @@
 char *_strcat(char *dest, char *src)
 {
-    int i;
-    int counter = 0;
+    int i, j;
+    int lendest, lensrc;
+    int counterdest = 0;
+    int countersrc = 0 ; 
 
 
-    while (*(dest+counter) != '\0')
+    while (*(dest+counterdest) != '\0')
     {
-            counter++;
+            counterdest++;
     }
 
+    while (*(src+countersrc) != '\0')
+    {
+            countersrc++;
+    }
 
-    
-    
-    
     
 }
