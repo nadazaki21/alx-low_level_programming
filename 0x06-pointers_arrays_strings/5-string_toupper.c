@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <ctype.h>
 /**
  * string_toupper - changes awhole string into an upper case
@@ -10,8 +11,16 @@ char *string_toupper(char *n)
 
 	while (*(n + i) != '\0')
 	{
-		*(n + i) = toupper(*(n + i));
+		printf("%c", *(n + i));
+		putchar('\n');
+		/**(n + i) = toupper(*(n + i));*/
+		*(n + i) = (*(n + i)) - 0x20 ;
+		printf("%c", *(n + i));
+		putchar('\n');
+
 		i++;
 	}
 	return (n);
 }
+
+// is it aplha y , then is it capital n, then change it to upper case  
