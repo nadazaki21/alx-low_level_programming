@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strncat - function to concatinate 2 stringgs to n bytes max
  * @dest: dest string
@@ -15,13 +16,12 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		lendest++;
 	}
-
 	while (*(src + lensrc) != '\0')
 	{
 		lensrc++;
 	}
 
-	if (n < lensrc)
+	if (n > lensrc) /* source less than allowed bytes*/
 	{
 		j = 0;
 
@@ -30,26 +30,15 @@ char *_strncat(char *dest, char *src, int n)
 			*(dest + lendest + j) = src[i];
 			j++;
 		}
-		for (i = (lendest + j +1) ; i < n; i++)
-		{
-			*(dest + lendest + j) = '\0';
-			j++;
-		}
-		
-
 	}
 	else
 	{
 		j = 0;
-
 		for (i = 0 ; i < n; i++)
 		{
 			*(dest + lendest + j) = src[i];
 			j++;
 		}
-
 	}
-
-
 	return (dest);
 }
