@@ -1,20 +1,25 @@
 char *_strcat(char *dest, char *src)
 {
-    int i, j;
-    int lendest, lensrc;
-    int counterdest = 0;
-    int countersrc = 0 ; 
+    int i, j = 0;
+    int lendest = 0, lensrc = 0;
 
-
-    while (*(dest+counterdest) != '\0')
+    /* get the length of both strings without the null char*/
+    while (*(dest + lendest) != '\0')
     {
-            counterdest++;
+        lendest++;
     }
 
-    while (*(src+countersrc) != '\0')
+    while (*(src + lensrc) != '\0')
     {
-            countersrc++;
+        lensrc++;
     }
 
+    for (i = 0 ; i <= lensrc; i++)
+    {
+        *(dest + lendest + j) = src[i];
+        j++;
+    }
+    
+    return (dest);
     
 }
