@@ -30,6 +30,12 @@ char *_strncat(char *dest, char *src, int n)
 			*(dest + lendest + j) = src[i];
 			j++;
 		}
+		for (i = lendest + j; i < n; i++)
+		{
+			*(dest + lendest + j) = '\0';
+			j++;
+		}
+		
 
 	}
 	else
