@@ -30,6 +30,11 @@ char *_strncpy(char *dest, char *src, int n)
 		{
 			dest[i] = src[i];
 		}
+
+		for (i = (countersrc + 1); i < n; i++)
+		{
+			dest[i] = '\0';
+		}
 	}
 
 	ptr = dest;
