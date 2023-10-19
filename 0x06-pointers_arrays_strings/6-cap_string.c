@@ -13,7 +13,7 @@ char *cap_string(char *n)
 	char delimiters[13] = {
 	' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t'};
 
-	*(n+0) = toupper(*(n+0));
+	*(n + 0) = toupper(*(n + 0));
 
 	while (*(n + i) != '\0')
 	{
