@@ -5,31 +5,24 @@
 */
 char *leet(char *n)
 {
-	int i = 0;
+	int i=0;
+	int j;
+
+	char cap_letters[5] = {'A', 'E', 'O', 'T', 'L'};
+	char small_letters[5] = {'a', 'e', 'o', 't', 'l'};
+	char numbers[5] = {'4', '3', '0', '7' ,'1'};
 
 	while (*(n + i) != '\0')
 	{
-		if (*(n + i) == 'a' || *(n + i) == 'A')
+		for (j = 0; j < 5; j++)
 		{
-			*(n + i) = '4';
-		}
-		else if (*(n + i) == 'e' || *(n + i) == 'E')
-		{
-			*(n + i) = '3';
-		}
-		else if (*(n + i) == 'o' || *(n + i) == 'O')
-		{
-			*(n + i) = '0';
-		}
-		else if (*(n + i) == 't' || *(n + i) == 'T')
-		{
-			*(n + i) = '7';
-		}
-		else if (*(n + i) == 'l' || *(n + i) == 'L')
-		{
-			*(n + i) = '1';
+			if (*(n + i) == cap_letters[j] || *(n + i) == small_letters[j])
+			{
+				*(n + i) = numbers[j];
+			}
 		}
 		i++;
 	}
 	return (n);
 }
+
