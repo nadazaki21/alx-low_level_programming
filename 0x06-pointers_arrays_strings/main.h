@@ -5,3 +5,4 @@ char *string_toupper(char * n);
 char *cap_string(char *);
 char *leet(char *);
 char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
