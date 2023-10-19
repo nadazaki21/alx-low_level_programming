@@ -10,7 +10,6 @@ char *string_toupper(char *n)
 
 	while (*(n + i) != '\0')
 	{
-		/**(n + i) = toupper(*(n + i));*/
 		if (((*(n + i)) >= 97 && (*(n + i)) <= 122))
 		{
 			*(n + i) = (*(n + i)) - 0x20;
