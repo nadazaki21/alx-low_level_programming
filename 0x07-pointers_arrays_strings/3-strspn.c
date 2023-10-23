@@ -9,7 +9,7 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	char delimeters[6] = {'.', ',', ' ', '\t', '\n', '\0'};
+	char delimeters[11] = {'.', ',', ' ', '\t', '\n', '\0', '-', '(', ')', '{', '}'};
 	unsigned int i = 0;
 	unsigned int j;
 	unsigned int count = 0;
