@@ -17,7 +17,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; i < len_s ; i++)
 	{
-		for (j = 0; j < 6; j++)
+		for (j = 0; j < 11; j++)
 		{
 			if (s[i] == delimeters[j])
 			{
