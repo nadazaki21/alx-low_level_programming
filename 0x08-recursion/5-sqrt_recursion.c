@@ -7,19 +7,13 @@
 */
 int sqrt_helper(int n, int guess)
 {
-	if (guess == 0)
-	{
-		return (-1);
-	}
-	else if ((guess * guess) == n)
-	{
-		return (guess);
-	}
-	else
-	{
-		guess--;
-		return (sqrt_helper(n, guess));
-	}
+	if (guess * guess == n) {
+        return guess;
+    } else if (guess * guess > n) {
+        return -1;  
+    } else {
+        return sqrt_helper(n, guess + 1);
+    }
 }
 
 /**
@@ -36,6 +30,6 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (sqrt_helper(n, n));
+		return (sqrt_helper(n, 1));
 	}
 }
