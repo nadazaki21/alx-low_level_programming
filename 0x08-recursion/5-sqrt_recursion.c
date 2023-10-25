@@ -7,13 +7,18 @@
 */
 int sqrt_helper(int n, int guess)
 {
-	if (guess * guess == n) {
-        return guess;
-    } else if (guess * guess > n) {
-        return -1;  
-    } else {
-        return sqrt_helper(n, guess + 1);
-    }
+	if (guess * guess == n)
+	{
+		return (guess);
+	}
+	else if (guess * guess > n)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (sqrt_helper(n, guess + 1));
+	}
 }
 
 /**
