@@ -1,16 +1,17 @@
 #include <stdio.h>
+void print(int nb)
+{
+    if (nb < 0) 
+    {
+        return;
+    }
+    printf("%d", nb);
+    nb --;
+    print(nb);
+}
 
 int main(void)
 {
-    int x = 4; 
-
-    int *ptr = &x;
-
-    int **ptr2 = &ptr; // ptr contains an address , *ptr 
-
-
-    printf("%d \n", **ptr2);
-
-    return 0;
+    print(4);
+    return (0);
 }
-
