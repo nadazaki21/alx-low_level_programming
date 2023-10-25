@@ -11,16 +11,14 @@ int sqrt_helper(int n, int guess)
 	{
 		return (-1);
 	}
-
-	else if ((guess * guess) != n)
+	else if ((guess * guess) == n)
+	{
+		return (guess);
+	}
+	else
 	{
 		guess--;
 		return (sqrt_helper(n, guess));
-	}
-
-	else
-	{
-		return (guess);
 	}
 }
 
