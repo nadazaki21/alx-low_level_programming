@@ -15,4 +15,9 @@ void _print_rev_recursion(char *s)
 	s++;
 	_print_rev_recursion(s);
 	printf("%c", *(s));
+
+	if (*s == '\0')
+	{
+        printf("\n");
+    }
 }
