@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - adds positive numbers.
  * @argc: number of arguments in command of running
@@ -19,9 +20,9 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < argc; i++)
 	{
-		for (j = 0; argv[i][j]; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if ((argv[i][j]) < 48 || (argv[i][j] > 57))
+			if (isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
