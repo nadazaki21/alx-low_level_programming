@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < argc; i++)
 	{
-		if ((argv[i] > 48) && (argv[i] < 57))
+		if ((atoi(argv[i]) > 48) && (atoi(argv[i]) < 57))
 		{
 			sum = sum + atoi(argv[i]);
 		}
