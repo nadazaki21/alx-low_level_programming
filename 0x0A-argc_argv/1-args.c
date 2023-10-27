@@ -6,8 +6,9 @@
  * @argv: the actull paarmeters if the running command
  * Return: 0 on success
 */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
+	(void)argv;
 	printf("%d\n", argc);
 
 	return (0);

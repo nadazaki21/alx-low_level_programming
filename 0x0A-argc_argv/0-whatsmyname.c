@@ -4,8 +4,11 @@
  * @argc: number of arguments in command of running
  * the proram
  * @argv: the actull paarmeters if the running command
+ * Return: 0 on success
 */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
+	(void)argc;
 	printf("%s\n", argv[0]);
+	return (0);
 }
