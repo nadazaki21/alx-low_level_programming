@@ -9,10 +9,9 @@
 */
 int main(int argc, char **argv)
 {
-	(void)argc;
 	int result;
 
-	if (argv[1] != NULL && argv[2] != NULL)
+	if (argc == 3)
 	{
 		result = atoi((argv[1])) * atoi((argv[2]));
 		printf("%d\n", result);
