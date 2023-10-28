@@ -48,6 +48,6 @@ int main(int argc, char **argv)
 			}
 		}
 	}
-	printf("%d\n", all_coins_number);
+	printf("%d", all_coins_number);
 	return (0);
 }
