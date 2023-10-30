@@ -13,31 +13,37 @@ char *_strdup(char *str)
 	char *ptr;
 	int counter = 0, i;
 
-	while (*(str + counter) != '\0')
-	{
-		counter++;
-	}
-
-	ptr = malloc((sizeof(char) * counter) + 1);
-
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	else if (str == NULL)
-	{
-		printf("failed to allocate memory");
-		return (NULL);
-	}
 	
+	if (str == NULL)
+	{
+		return NULL;
+	}
 	else
 	{
-		for (i = 0; i <= counter; i++)
-		{	
-			ptr[i] = str[i];
+		while (*(str + counter) != '\0')
+		/**
+		 * can not find length of str if it is NULL
+		*/
+		{
+			counter++;
 		}
 
-		return (ptr);
+		ptr = malloc((sizeof(char) * counter) + 1);
+
+		if (ptr == NULL) 
+		{
+			return (NULL);
+		}
+		else
+		{
+			for (i = 0; i <= counter; i++)
+			{
+			ptr[i] = str[i];
+			}
+
+			return (ptr);
+		}
+		
 	}
 
 }
