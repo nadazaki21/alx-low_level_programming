@@ -30,9 +30,9 @@ char *str_concat(char *s1, char *s2)
 		if (ptr == NULL)
 			return (NULL);
 		for (i = 0; i <= lens2 ; i++)
-		{
 			ptr[i] = s2[i];
-		}
+			
+		return (ptr);
 	}
 	else if (s2 == NULL)
 	{
@@ -41,9 +41,9 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 
 		for (i = 0; i <= lens1 ; i++)
-		{
 			ptr[i] = s1[i];
-		}
+		
+		return(ptr);
 	}
 	else
 	{
