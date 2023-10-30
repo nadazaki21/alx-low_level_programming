@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strdup -  function that returns a pointer to a newly
  *  allocated space in memory, which contains a copy of the
@@ -19,14 +20,20 @@ char *_strdup(char *str)
 
 	ptr = malloc((sizeof(char) * counter) + 1);
 
-	if (ptr == NULL || str  == NULL)
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
+	else if (str == NULL)
+	{
+		printf("failed to allocate memory");
+		return (NULL);
+	}
+	
 	else
 	{
 		for (i = 0; i <= counter; i++)
-		{
+		{	
 			ptr[i] = str[i];
 		}
 
