@@ -11,11 +11,10 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int lens1 = 0, lens2 = 0;
 	int i, position;
-	char space1 = " ", string2 = " ";
 
 	if (s1 == NULL && s2 == NULL)
-	 	{ptr = malloc(sizeof(char));
-		ptr[0] = space1;
+	 	{ *s1 = 11;
+		ptr = s1;
 		return ptr;}
 		
 	else if (s1 == NULL)
