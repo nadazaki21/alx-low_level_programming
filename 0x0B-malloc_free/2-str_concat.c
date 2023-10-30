@@ -12,20 +12,14 @@ char *str_concat(char *s1, char *s2)
 	int lens1 = 0, lens2 = 0;
 	int i, position;
 
-	/*get length of both strings*/
-		while (*(s2 + lens2) != '\0')
-		{
-			lens2++;
-		}
-		while (*(s1 + lens1) != '\0')
-		{
-			lens1++;
-		}
-
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	else if (s1 == NULL)
 	{
+		while (*(s2 + lens2) != '\0')
+		{
+			lens2++;
+		}
 		ptr = malloc(sizeof(char) * (lens2) + 1);
 		if (ptr == NULL)
 			return (NULL);
@@ -36,6 +30,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s2 == NULL)
 	{
+		while (*(s1 + lens1) != '\0')
+		{
+			lens1++;
+		}
 		ptr = malloc(sizeof(char) * (lens1) + 1);
 		if (ptr == NULL)
 			return (NULL);
@@ -47,6 +45,14 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
+		while (*(s1 + lens1) != '\0')
+		{
+			lens1++;
+		}
+		while (*(s2 + lens2) != '\0')
+		{
+			lens2++;
+		}
 		/* allocate memory*/
 		ptr = malloc(sizeof(char) * (lens1 + lens2) + 1);
 		if (ptr == NULL)
