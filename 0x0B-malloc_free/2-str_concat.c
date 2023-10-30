@@ -9,14 +9,18 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	char space = ' ';
-	char *ptr = &space;
+	char *ptr;
 	int lens1 = 0, lens2 = 0;
 	int i, position;
 	
 
 	if (s1 == NULL && s2 == NULL)
-	 	printf(" ");
+	{
+		ptr = malloc(sizeof(char) * 1);
+		ptr[0] = ' ';
+		return ptr;
+	}
+	 	
 		
 	else if (s1 == NULL)
 	{
