@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 			lens1++;
 		}
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	else if (s1 == NULL)
 	{
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 		for (i = 0; i <= lens2 ; i++)
 			ptr[i] = s2[i];
-			
+
 		return (ptr);
 	}
 	else if (s2 == NULL)
