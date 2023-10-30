@@ -8,13 +8,14 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
+	char space = ' ';
+	char *ptr = &space;
 	int lens1 = 0, lens2 = 0;
 	int i, position;
+	
 
 	if (s1 == NULL && s2 == NULL)
 	 	{ 
-		*ptr = " ";
 		return ptr;}
 		
 	else if (s1 == NULL)
