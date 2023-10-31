@@ -8,6 +8,11 @@
 */
 char *argstostr(int ac, char **av)
 {
+    if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+    
 	int i, j, len, position = 0;
     char *ptr;
 
