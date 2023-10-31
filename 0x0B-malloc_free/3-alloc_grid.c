@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 	else
 	{
 		int **matrix;
-		int i, j;
+		int i, j, k;
 
 		matrix = (int **) malloc(sizeof(int *) * height);
 		if (matrix == NULL)
@@ -30,8 +30,11 @@ int **alloc_grid(int width, int height)
 
 			if (*(matrix + i) == NULL)
 			{
-				free(matrix[i]);
-				free (matrix);
+				for (k = 0; k <= i; k++)
+				{
+					free(*(matrix + k));
+				}
+				free(matrix);
 				return (NULL);
 			}
 		}	
