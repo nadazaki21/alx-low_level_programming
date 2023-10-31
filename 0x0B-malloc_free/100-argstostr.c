@@ -42,9 +42,8 @@ char *argstostr(int ac, char **av)
 
         if (av[i][j] == '\0')
         {
-            printf("now at terminating char");
             ptr[position] = '\n';
-            printf("%cthis a a space\n", ptr[position]);
+            position++;
         }
         
     }
