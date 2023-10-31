@@ -8,43 +8,45 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, current_len, next_len;
+	int i, j, len, position = 0;
+    char *ptr;
 
-	if (ac == 0 || av == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		for (i = 0; i < ac - 1; i++)
-		{
-			current_len = 0;
-			j = 0;
+    for (i = 0; i < ac; i++)
+    {
+        j = 0;
+        len = 0;
+        while (av[i][j] != '\0')
+        {
+            len++;
+            j++;
+        }
+        len = len + ac;
+    }
 
-			while (av[i][j] != '\0')
-			{
-				current_len++;
-				j++;
-			}
+    ptr = malloc(sizeof(char) * (len));
 
-			next_len = 0;
-			j = 0;
+    if (ptr == NULL)
+    {
+        return NULL;
+    }
 
-			while (av[i + 1][j] != '\0')
-			{
-				next_len++;
-				j++;
-			}
+    for (i = 0; i < ac; i++)
+    {   
+        j = 0;
+        while (av[i][j] != '\0')
+        {
+            ptr[position] = av[i][j];
+            j++;
+            position++;
+        }
 
-			for (k = 0; k <= next_len; k++)
-			{
-				av[i][current_len] = av[i + 1][k];
-				if (k == next_len)
-				{
-					av[i][current_len + 1] = '\n';
-				}
-			}
-		}
-		return (av[0]);
-	}
+        if (av[i][j] == '\0')
+        {
+            printf("now at terminating char");
+            ptr[position] = '\n';
+            printf("%cthis a a space\n", ptr[position]);
+        }
+        
+    }
+    return ptr;
 }
