@@ -16,19 +16,13 @@ int **alloc_grid(int width, int height)
 	else
 	{
 		int **matrix;
-		int i, j, k, counter = 0;
+		int i, j, k;
 
 		matrix = malloc(sizeof(int *) * height);
 		if (matrix == NULL)
 		{
 			return (NULL);
 		}
-		else
-		{
-			counter = height;
-		}
-
-		
 
 		for (i = 0; i < width; i++)
 		{
@@ -50,10 +44,8 @@ int **alloc_grid(int width, int height)
 			for (j = 0; j < width; j++)
 			{
 				*(*(matrix + i) + j) = 0;
-				counter++;
 			}
 		}
-		printf("%d\n", counter);
 		return (matrix);
 	}
 }
