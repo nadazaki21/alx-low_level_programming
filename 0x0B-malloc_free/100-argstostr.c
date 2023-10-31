@@ -11,10 +11,10 @@ char *argstostr(int ac, char **av)
 	int i, j, len, position = 0;
     char *ptr;
 
+    len = 0;
     for (i = 0; i < ac; i++)
     {
         j = 0;
-        len = 0;
         while (av[i][j] != '\0')
         {
             len++;
