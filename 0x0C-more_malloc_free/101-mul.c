@@ -9,7 +9,8 @@
 */
 int main(int argc, char **argv)
 {
-	int i, j, result, num1, num2;
+	int i, j;
+	long int result, num1, num2;
 
 	if (argc != 3)
 	{
