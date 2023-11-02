@@ -1,17 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
+#include <string.h>
+/**
+ * string_nconcat - concatinates the second string to the first
+ * @s1: string 1
+ * @s2:: string 2
+ * @n: number of charecters to be concatinated
+ * Return: pointer to concatinated string
+*/
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    char *ptr, *ptr2;
+	unsigned int i, lens1 = 0, lens2 = 0, limit, j = 0;
+	char *ptr;
 
-    char arr[4] = "hi";
-
-    ptr = arr; 
-
-    ptr2 = malloc(sizeof(char) * 3);
-
-    ptr2 = ptr;
-
-    printf("%s", ptr2);
+	if (s1 == NULL)
+	{
+		ptr = malloc(sizeof(char) * (strlen(s2) + 1));
+		if (ptr == NULL)
+			return  (NULL);
+		ptr = s1;
+	}
+	else if (s2 == NULL)
+	{
+		ptr = malloc(sizeof(char) * (strlen(s1) + 1));
+		if (ptr == NULL)
+			return  (NULL);
+		ptr = s2;
+	}
+	else
+	{
+		if (n >= lens2)
+			limit = strlen(s2) + strlen(s1) + 1;
+		else
+			limit = n + strlen(s1) + 1;
+		ptr = malloc(sizeof(char) * (limit + 1));
+		if (ptr == NULL)
+			return  (NULL);
+		for (i = 0; i <= limit ; i++)
+		{
+			if (i == (limit))
+				ptr[i] = '\0';
+			else if (i >= lens1)
+			{
+				ptr[i] = s2[j];
+				j++;
+			}
+			else
+				ptr[i] = s1[i];
+		}
+	}
+	return (ptr);
 }
