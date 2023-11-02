@@ -13,13 +13,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, lens1 = 0, lens2 = 0, limit, j = 0;
 	char *ptr;
 
-	lens1 = strlen(s1);
-	lens2 = strlen(s2);
-
-	if (n >= lens2)
-		limit = lens2 + lens1 + 1;
+	if (s1 == NULL)
+		limit = strlen(s2);
+	else if (s2 == NULL)
+		limit = strlen(s1);
 	else
-		limit = n + lens1 + 1;
+	{
+		lens1 = strlen(s1);
+		lens2 = strlen(s2);
+
+		if (n >= lens2)
+			limit = lens2 + lens1 + 1;
+		else
+			limit = n + lens1 + 1;
+	}
 
 	ptr = malloc(sizeof(char) * (limit + 1));
 	if (ptr == NULL)
