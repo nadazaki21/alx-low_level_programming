@@ -8,27 +8,27 @@
 */
 int *array_range(int min, int max)
 {
-    int *ptr;
-    int i, num;
+	int *ptr;
+	int i, num;
 
-    if (min > max)
-    {
-        return (NULL);
-    }
-    
-    ptr = malloc(sizeof(int) * (max -  min + 2));
-    if (ptr == NULL)
-    {
-        return (NULL);
-    }
-    
-    num = min;
+	if (min > max)
+	{
+		return (NULL);
+	}
 
-    for (i = 0; i <  (max -  min + 2); i++)
-    {
-        ptr[i]= num;;
-        num++;
-    }
-    
-    return (ptr);
+	ptr = malloc(sizeof(int) * (max -  min + 2));
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+
+	num = min;
+
+	for (i = 0; i <  (max -  min + 2); i++)
+	{
+		ptr[i] = num;
+		num++;
+	}
+
+	return (ptr);
 }
