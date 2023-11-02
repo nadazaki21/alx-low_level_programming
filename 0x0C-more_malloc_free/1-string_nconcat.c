@@ -20,28 +20,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return  (NULL);
 		ptr = s1;
 	}
-		
 	else if (s2 == NULL)
 	{
 		ptr = malloc(sizeof(char) * (strlen(s1) + 1));
 		if (ptr == NULL)
 			return  (NULL);
 		ptr = s2;
-	}	
+	}
 	else
 	{
-		lens1 = strlen(s1);
-		lens2 = strlen(s2);
-
 		if (n >= lens2)
-			limit = lens2 + lens1 + 1;
+			limit = strlen(s2) + strlen(s1) + 1;
 		else
-			limit = n + lens1 + 1;
-
+			limit = n + strlen(s1) + 1;
 		ptr = malloc(sizeof(char) * (limit + 1));
 		if (ptr == NULL)
 			return  (NULL);
-
 		for (i = 0; i <= limit ; i++)
 		{
 			if (i == (limit))
