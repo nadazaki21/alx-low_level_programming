@@ -15,19 +15,30 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-
-	ptr = malloc(sizeof(int) * (max -  min + 2));
-	if (ptr == NULL)
+	else if (min == max)
 	{
-		return (NULL);
+		ptr = malloc(sizeof(int) * 1);
+
+		if (ptr == NULL)
+			return (NULL);
+
+		ptr[0] = min;
 	}
-
-	num = min;
-
-	for (i = 0; i <  (max -  min + 2); i++)
+	else
 	{
-		ptr[i] = num;
-		num++;
+		ptr = malloc(sizeof(int) * (max -  min + 2));
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
+
+		num = min;
+
+		for (i = 0; i <  (max -  min + 2); i++)
+		{
+			ptr[i] = num;
+			num++;
+		}
 	}
 
 	return (ptr);
