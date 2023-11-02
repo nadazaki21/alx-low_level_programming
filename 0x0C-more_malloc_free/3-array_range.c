@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * 
+ * array_range - defines an arranged array
+ * @min: minimum number
+ * @max: maximum number
+ * Return: the pointer to the array;
 */
 int *array_range(int min, int max)
 {
-    int *ptr, i, num;
+    int *ptr;
+    int i, num;
 
     if (min > max)
     {
@@ -22,8 +26,8 @@ int *array_range(int min, int max)
 
     for (i = 0; i <  (max -  min + 2); i++)
     {
-        ptr[i]= min;
-        min++;
+        ptr[i]= num;;
+        num++;
     }
     
     return (ptr);
