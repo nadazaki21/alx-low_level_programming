@@ -44,12 +44,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (my_dog == NULL)
 	return (NULL);
 
-	if (name == NULL || owner == NULL)
-	{
-		return NULL;
-	}
-	
-
 	if (name != NULL)
 	{
 		i = 0;
@@ -63,7 +57,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		(my_dog->name) = copy(name);
 	}
 	else
-		(my_dog->name) = NULL;
+	{
+		free(my_dog);
+		return (NULL);
+	}
 
 	my_dog->age = age;
 
@@ -80,7 +77,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		(my_dog->owner) = copy(owner);
 	}
 	else
-		(my_dog->owner) = NULL;
-
+	{
+		free(my_dog);
+		return (NULL);
+	}
 	return (my_dog);
 }
