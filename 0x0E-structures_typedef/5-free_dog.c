@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * free_dog - free dynamically allocated memory for struct
  * @d: pointer to struct
