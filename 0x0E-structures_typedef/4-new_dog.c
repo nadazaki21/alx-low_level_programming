@@ -38,9 +38,7 @@ char *copy(char *ptr)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *dog_name_heap = copy(name);
-	char *dog_owner_heap = copy(owner);
-
+	int i, len;
 	dog_t *my_dog = malloc(sizeof(dog_t));
 
 	if (my_dog == NULL)
@@ -49,9 +47,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	else
 	{
-		my_dog->name = dog_name_heap;
+		i = 0;
+		len = 0;
+		while (name[i] != '\0')
+		{
+			len++;
+			i++;
+		}
+		my_dog->name = malloc(sizeof(char) * (len + 1));
+		(my_dog->name) = copy(name);
+
 		my_dog->age = age;
-		my_dog->owner = dog_owner_heap;
+
+		i = 0;
+		len = 0;
+		while (owner[i] != '\0')
+		{
+			len++;
+			i++;
+		}
+		my_dog->owner = malloc(sizeof(char) * (len + 1));
+		(my_dog->owner) = copy(owner);
 	}
 
 	return (my_dog);
