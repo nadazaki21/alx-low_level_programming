@@ -47,27 +47,41 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	else
 	{
-		i = 0;
-		len = 0;
-		while (name[i] != '\0')
+		if (name != NULL)
 		{
-			len++;
-			i++;
+			i = 0;
+			len = 0;
+			while (name[i] != '\0')
+			{
+				len++;
+				i++;
+			}
+			my_dog->name = malloc(sizeof(char) * (len + 1));
+			(my_dog->name) = copy(name);
 		}
-		my_dog->name = malloc(sizeof(char) * (len + 1));
-		(my_dog->name) = copy(name);
-
+		else
+		{
+			(my_dog->name) = NULL;
+		}
+		
 		my_dog->age = age;
 
-		i = 0;
-		len = 0;
-		while (owner[i] != '\0')
+		if (owner != NULL)
 		{
-			len++;
-			i++;
+			i = 0;
+			len = 0;
+			while (owner[i] != '\0')
+			{
+				len++;
+				i++;
+			}
+			my_dog->owner = malloc(sizeof(char) * (len + 1));
+			(my_dog->owner) = copy(owner);
 		}
-		my_dog->owner = malloc(sizeof(char) * (len + 1));
-		(my_dog->owner) = copy(owner);
+		else
+		{
+			(my_dog->owner) = NULL;
+		}
 	}
 
 	return (my_dog);
