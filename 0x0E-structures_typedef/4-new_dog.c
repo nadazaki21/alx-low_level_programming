@@ -8,18 +8,26 @@
 char *copy(char *ptr)
 {
 	int i = 0, len = 0;
+	char *heap_copy;
 
 	while (ptr[i] != '\0')
 	{
 		len++;
 		i++;
 	}
-	char *heap_copy = malloc(sizeof(char) * (len + 1));
 
-	for (i = 0; i < len; i++)
+	heap_copy = malloc(sizeof(char) * (len + 1));
+	if (heap_copy == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i <= len; i++)
 	{
 		heap_copy[i] = ptr[i];
 	}
+
+	return (heap_copy);
 }
 /**
  * new_dog - creates a new dog
