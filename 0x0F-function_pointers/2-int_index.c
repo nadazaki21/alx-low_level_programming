@@ -4,10 +4,10 @@
  * @array: array to search in
  * @size: size of the array
  * @cmp: pointer to function that comapes
+ * Return: the index og the element that is an ineteger
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int index = NULL;
 	int i;
 	int flag;
 
@@ -15,30 +15,19 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		return (-1);
 	}
-
-	if (cmp != NULL)
+	else
 	{
-		for (i = 0; i < size; i++)
+		if (cmp != NULL)
 		{
-			flag = (array[i]);
-			if (flag != 0)
+			for (i = 0; i < size; i++)
 			{
-				index = i;
-				break;
+				flag = (cmp(array[i]));
+				if (flag != 0)
+				{
+					return (i);
+				}
 			}
 		}
-	}
-	else
-	{
 		return (-1);
-	}
-
-	if (index == NULL)
-	{
-		return (-1);
-	}
-	else
-	{
-		return (index);
 	}
 }
