@@ -2,8 +2,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
- * print_all - function that prints anything. 
- * @format: the type of variable to be printed
+ * print_char - prints the chr pointed to by va_list
+ * @x: current var pointed to
 */
 void print_char(va_list x)
 {
@@ -30,6 +30,10 @@ void print_string(va_list x)
 		printf("(nil)");
 	} 
 }
+/**
+ * print_all - function that prints anything. 
+ * @format: the type of variable to be printed
+*/
 void print_all(const char * const format, ...)
 {
 	int i = 0, j;
