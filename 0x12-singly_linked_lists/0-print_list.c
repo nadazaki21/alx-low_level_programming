@@ -10,7 +10,7 @@ size_t print_list(const list_t *h) /* pointer is constant*/
 
 	if (h == NULL)
 	{
-		return (0);
+		return (nodes);
 	}
 
 	while (h != NULL)
