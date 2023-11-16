@@ -11,7 +11,7 @@ list_t *add_node(list_t **head, const char *str)
 	/* head is an array of pointer to stucts*/
 	/* (*head) would mean the address of a specific struct*/
 	int i = 0, len = 0;
-	list_t *new_node, *current_last_node, *tmp;
+	list_t *new_node, *tmp;
 
 	/* create a new node*/
 	new_node = malloc(sizeof(list_t));
@@ -35,17 +35,11 @@ list_t *add_node(list_t **head, const char *str)
 		new_node->str = NULL;
 
 	new_node->len = len;
-	/*make last node point to the new node*/
+	/*add the new node to the beginning*/
 	if ((*head) != NULL)
 	{
-		tmp = *(head);
-		while ((*head)->next != NULL)
-		{
-			(*head) = (*head)->next;
-		}
-		current_last_node = (*head);
-		*head = tmp;
-		current_last_node->next = new_node;
+		new_node->next = head;
+		head = new_node;
 	}
 	else
 		*(head) = new_node;
