@@ -4,7 +4,7 @@
  * them main function
 */
 void pre_main_function(void) __attribute__((constructor));
-
+/* the attribute used here works for ggcc compilers only*/
 void pre_main_function(void)
 {
 	printf(
