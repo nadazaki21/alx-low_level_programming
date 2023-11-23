@@ -11,7 +11,7 @@ void print_binary_helper(unsigned long int n)
 	}
 
 	print_binary_helper(n >> 1);
-	printf("%ld", n & 1);
+	_putchar((n & 1) + '0');
 }
 
 /**
@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 {
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 
