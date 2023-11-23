@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /**
  * print_binary_helper - helper function to print the binary representation
  * @n: the number to be converted to binary
