@@ -1,0 +1,7 @@
+PRE-LOAD
+
+Functions defined in the preloaded libraries will override functions with the same name in subsequently loaded libraries.
+
+This allows you to intercept and replace specific functions with your custom implementations.
+
+It allows developers to override or intercept specific library functions without modifying the original code.
