@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * dlistint_len - print_dlistint
- * @h: head of the list
- * Return: the number of nodes in the lists
+ * sum_dlistint - print_dlistint
+ * @head: head of the list
+ * Return: the sum of noes in list
 */
 int sum_dlistint(dlistint_t *head)
 {
