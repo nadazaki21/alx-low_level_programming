@@ -2,23 +2,26 @@
 
 hash_node_t *create_node(const char *key, const char *value)
 {
-    hash_node_t *new_node = malloc(sizeof(hash_node_t));
+	hash_node_t *new_node = malloc(sizeof(hash_node_t));
 
-    new_node->next = NULL;
-    new_node->value = strdup(value);
-    if (new_node->value == NULL)
-        return (NULL);
-    new_node->key = strdup(key);
-    if (new_node->key == NULL)
-        return (NULL);
+	new_node->next = NULL;
+	new_node->value = strdup(value);
+	if (new_node->value == NULL)
+		return (NULL);
+	new_node->key = strdup(key);
+	if (new_node->key == NULL)
+		return (NULL);
 
-    return (new_node);
+	return (new_node);
 }
-
+/**
+ * update_node - updating the value of node if node with key existed
+ * @ht: the hash table
+*/
 void update_node(hash_table_t *ht, const char *value, int index)
 {
-    free(ht->array[index]->value);
-    ht->array[index]->value = strdup(value);
+	free(ht->array[index]->value);
+	ht->array[index]->value = strdup(value);
 }
 /**
  * hash_table_set - adds an element to the  hash table
@@ -28,26 +31,26 @@ void update_node(hash_table_t *ht, const char *value, int index)
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    int index;
-    hash_node_t *new_node;
+	int index;
+	hash_node_t *new_node;
 
-    if (!ht || !key)
+	if (!ht || !key)
 		return (0);
 
-    index = key_index((unsigned char *)key , ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 
-    if (ht->array[index] != NULL)
-    {
-        update_node(ht, value, index);
-    }
-    else
-    {
-        new_node = create_node(key, value);
-        if (new_node == NULL)
-            return (0);
+	if (ht->array[index] != NULL)
+	{
+		update_node(ht, value, index);
+	}
+	else
+	{
+		new_node = create_node(key, value);
+		if (new_node == NULL)
+			return (0);
 
-        ht->array[index] = new_node;
-    }
+		ht->array[index] = new_node;
+	}
 
-    return (1);
+	return (1);
 }
