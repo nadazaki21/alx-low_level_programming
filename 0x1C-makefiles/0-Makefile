@@ -1,0 +1,4 @@
+CC = gcc       #compiler to use
+
+all:
+	${CC} main.c school.c -o school
