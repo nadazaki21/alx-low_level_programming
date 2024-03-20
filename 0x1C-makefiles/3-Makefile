@@ -5,9 +5,9 @@ OBJ = ${SRC:.c=.o}
 NAME = school
 RM  = rm -rfv
 
-all: ${NAME}
 
-${NAME}:${SRC}
+
+all:${SRC}
 	${CC} ${SRC} -o ${NAME}
 
 clean:
