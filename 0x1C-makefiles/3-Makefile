@@ -10,7 +10,7 @@ all:${SRC}
 	${CC} ${SRC} -o ${NAME}
 
 clean:
-	${RM} ${NAME}  *~ .*~ *.swp *.swo
+	${RM} ${NAME}  *~ 
 
 oclean:
 	${RM} *.o
