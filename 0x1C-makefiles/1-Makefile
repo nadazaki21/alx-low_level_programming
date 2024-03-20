@@ -1,5 +1,5 @@
 CC = gcc       #compiler to use
-SRC = $(wildcard *.c)   # wildcard function to slecetion all the .c files
+SRC := $(wildcard *.c)   # wildcard function to slecetion all the .c files
 
 all:
-	${CC} ${SRC} -o school
+	${CC} ${SRC} -o test
