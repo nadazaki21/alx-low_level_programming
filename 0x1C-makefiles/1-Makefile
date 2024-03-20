@@ -2,4 +2,4 @@ CC = gcc       #compiler to use
 SRC := $(wildcard *.c)   # wildcard function to slecetion all the .c files
 
 all:
-	${CC} ${SRC} -o test
+	${CC} ${SRC} -o school
