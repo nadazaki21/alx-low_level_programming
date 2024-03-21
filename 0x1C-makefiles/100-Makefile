@@ -3,14 +3,9 @@ CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
-#RM  = rm -frv
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
-
-ifeq ($(wildcard m.h),)
-$(error "m.h header file is missing.")
-endif
-
-all:${OBJ}
+all: m.h ${OBJ}
 	${CC} -Wall -Werror -Wextra -pedantic ${OBJ} -o ${NAME}
 clean:
 	${RM} *~ ${NAME}   
