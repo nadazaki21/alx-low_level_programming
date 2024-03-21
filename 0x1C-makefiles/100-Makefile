@@ -5,6 +5,11 @@ OBJ = ${SRC:.c=.o}
 NAME = school
 RM  = rm -frv
 CFLAGS = -Wall -Werror -Wextra -pedantic
+
+ifeq ($(wildcard m.h),)
+$(error "m.h header file is missing.")
+endif
+
 all:${OBJ}
 	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
 clean:
